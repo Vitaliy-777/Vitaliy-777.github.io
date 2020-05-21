@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Метромост Смоленский | Контакты</title>
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+	<!-- Custom CSS -->
+	<link rel="stylesheet" type="text/css" href="css/contacts.min.css">
+
+	<!-- Favicons -->
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+	<link rel="manifest" href="img/favicons/site.webmanifest">
+	<link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#02b2b0">
+	<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+	<meta name="theme-color" content="#161618">
+
+	<!-- Open Graph Protocol -->
+	<meta property="og:title" content="Метромост Смоленский" />
+	<meta property="og:description" content="Не пропустите свето-музыкальное шоу в Смоленске" />
+	<meta property="og:type" content="article" />
+	<meta property="og:url" content="http://bridge.zzdolls.ru" />
+	<meta property="og:image" content="http://bridge.zzdolls.ru/img/screenshot.jpg" />
+</head>
+<body>
+	<nav id="mob-nav">
+		<img src="img/close.png" alt="CLOSE" class="close_btn" onclick="slideout.close()">
+		<ul class="mob-nav__menu">
+			<li class="mob-nav__menu__item">
+				<a href="index.html" class="go_to" onclick="slideout.close()">Главная
+				</a>
+			</li>
+			<li class="mob-nav__menu__item">
+				<a href="history.html" class="go_to" onclick="slideout.close()">История</a>
+			</li>
+			<li class="mob-nav__menu__item">
+				<a href="anonsi.html" class="go_to" onclick="slideout.close()">Анонсы</a>
+			</li>
+			<li class="mob-nav__menu__item">
+				<a href="contacts.html" class="go_to" onclick="slideout.close()">Контакты</a>
+			</li>
+		</ul>
+		<div class="mob-lang">
+			<span>ru</span> | <span>en</span>
+		</div>
+	</nav>
+	<main id="main">
+		<header id="header" class="header">
+			<div class="container">
+				<div class="heading">
+					<a href="index.html" class="logo"><img src="img/logotype.svg" alt="Home logo"></a>
+					<nav class="nav">
+						<ul class="nav__menu d-flex">
+							<li><a href="history.html">история</a></li>
+							<li><a href="announcements.html">анонсы</a></li>
+							<li><a href="contacts.html">контакты</a></li>
+						</ul>
+					</nav>
+					<div class="lang">
+						<a href="#" class="lang__ru lang__cur">ru</a>
+						<a href="#" class="divider">|</a>
+						<a href="#" class="lang__eg">en</a>
+					</div>
+					<div class="menu_bars toggle-button">
+						<img src="img/menu_bars.svg" alt="">
+					</div>
+					<div class="offer">
+						<h1 class="offer__title">Контакты</h1>
+						<h2 class="offer__subtitle">ул. Есенина,<br> дом Каруселина 1337</h2>
+					</div>
+					<div class="info d-flex">
+						<table class="schedule">
+							<caption><h3 class="title">График работы:</h3></caption>
+							<tbody>
+								<tr>
+									<td>пн-чт</td>
+									<td>08:30 - 16:30</td>
+								</tr>
+								<tr>
+									<td>пт</td>
+									<td>08:30 - 15:00</td>
+								</tr>
+								<tr>
+									<td>Обед</td>
+									<td>12:00 - 12:42</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="tel">
+							<h3 class="title">Контакт-центр «Московский транспорт»</h3>
+							<a href="tel:8 (495) 539-54-54">8 (495) 539-54-54, 3210</a>
+						</div>
+					</div>
+					<div class="letter">
+						<h3 class="title letter__title">Оффициальное письмо:</h3>
+						<p class="letter__text">
+							Официальное письмо в Московский метрополитен можно направить по адресу: 129110, Москва, проспект Мира, дом
+							41, 
+							стр. 2, или по факсу 8 (495) 631-3744 (проверочный телефон – 
+							8 (495) 688-0426) с приложением документов, подтверждающих указанные в заявлении события.
+						</p>
+					</div>
+				</div>
+			</div>
+		</header>
+	</main>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="js/slideout.min.js"></script>
+	<script src="js/remodal.min.js"></script>
+
+	<script type="text/javascript" defer>
+		var slideout = new Slideout({ 
+			'panel': document.getElementById('main'),       //id блока, что будет отъезжать в бок
+			'menu': document.getElementById('mob-nav'),     //id меню 
+			'padding': 375,                                 //На сколько контент должен отъехать в бок 
+			'tolerance': 70 
+		}); 
+		// Toggle button
+		document.querySelector('.toggle-button').addEventListener('click', function() {
+			slideout.toggle();
+		});
+	</script>
+</body>
+</html>
